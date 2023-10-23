@@ -1,18 +1,18 @@
-// User Choice variables for prompts, to lower case to make them align with the parameters
-//var userChoice = ['yes', 'no'];
-//userChoice.toLowerCase();
- //variable for length of password they choose
-//var userLengthChoice;
-
-
-const charactersUpperCase = []
-
+// base algoritihim for generating a password
 function generatePassword() {
     let pass = '';
     let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
         'abcdefghijklmnopqrstuvwxyz0123456789@#$';
- 
-    for (let i = 1; i <= 8; i++) {
+        var numberChoice = window.prompt("Choose a password length between 8-128 characters");
+
+        console.log(numberChoice);
+
+    if(numberChoice < 8 && numberChoice > 128){
+        pass = 'Error: password needs to be between 8-128 characters'
+        
+    } else if (numberChoice >= 8 && numberChoice <= 128) {
+    
+    for (let i = 1; i <= numberChoice; i++) {
         let char = Math.floor(Math.random()
             * str.length + 1);
  
@@ -20,9 +20,11 @@ function generatePassword() {
     }
  
     return pass;
+    }
 }
  
-console.log(generatePassword());
+
+
 
 
 // Get references to the #generate element
