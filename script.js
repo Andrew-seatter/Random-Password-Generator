@@ -22,6 +22,7 @@ function generatePassword() {
 
         //alert windows and variables for their answers, deided to just use array concat for it and seperate the arrays
         //rather than write a ton of conditionals trying to map out different answer possibilites
+        //console logged array counter after every conditional to see the arrays come together
         var numberChoice = window.prompt("Choose a password length between 8-128 characters");
         console.log(numberChoice);
         
